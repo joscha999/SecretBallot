@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Offline-Prüfung</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <header><strong class="brand">Geheime Wahl</strong><nav><a href="index.html">Abstimmen</a><a href="bulletin.html">Öffentliche Liste</a></nav></header>
+    <main>
+        <h1>Ergebnis prüfen</h1>
+        <p>Hier kann jede Person ein veröffentlichtes Ergebnis selbst nachrechnen. Die Seite funktioniert auch ohne Server: den Ordner <span class="mono">wwwroot</span> aus dem Quellcode herunterladen und <span class="mono">pruefen.html</span> im Browser öffnen.</p>
+        <div id="content"></div>
+    </main>
+    <script src="js/dom.js"></script>
+    <script src="js/ballot-crypto.js"></script>
+    <script src="js/ballot-tally.js"></script>
+    <script src="js/verify.js"></script>
+    <script src="js/pruefen.js"></script>
+</body>
+</html>

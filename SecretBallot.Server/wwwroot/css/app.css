@@ -1,0 +1,51 @@
+:root {
+    --bg: #ffffff;
+    --fg: #1d1d1f;
+    --muted: #5f6368;
+    --accent: #ff8800;
+    --accent-fg: #000000;
+    --border: #d0d3d7;
+    --ok: #1e7b34;
+    --warn: #8a5a00;
+    --error: #b3261e;
+    --panel: #f5f6f7;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #16171a;
+        --fg: #ececf0;
+        --muted: #a0a4ab;
+        --border: #3a3d43;
+        --ok: #6fd18a;
+        --warn: #f0c060;
+        --error: #ff8a80;
+        --panel: #202227;
+    }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
+header { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+header nav { display: flex; flex-wrap: wrap; gap: 12px; flex: 1; }
+header nav a { color: var(--fg); text-decoration: none; }
+header nav a.active { border-bottom: 2px solid var(--accent); }
+main { max-width: 860px; margin: 0 auto; padding: 16px; }
+section { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 16px 0; }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.2rem; margin-top: 0; }
+button, .button { display: inline-block; font: inherit; padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: var(--fg); cursor: pointer; text-decoration: none; }
+button.primary, .button { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+input[type=text], input[type=password], input[type=number], select, textarea { font: inherit; width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--fg); }
+label { display: block; margin: 8px 0; }
+label.choice { display: flex; gap: 8px; align-items: center; padding: 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); }
+.fingerprint { font-family: ui-monospace, monospace; font-size: 1.3rem; letter-spacing: 0.05em; word-break: break-word; }
+.mono { font-family: ui-monospace, monospace; word-break: break-all; }
+.message { padding: 8px 12px; border-radius: 6px; border-left: 4px solid var(--muted); background: var(--bg); }
+.message.ok { border-color: var(--ok); }
+.message.warn { border-color: var(--warn); }
+.message.error { border-color: var(--error); }
+.muted { color: var(--muted); }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+ul.plain { list-style: none; padding: 0; }
+ul.receipts { font-family: ui-monospace, monospace; font-size: 0.85rem; columns: 2 280px; padding-left: 0; list-style: none; }
+.found { background: var(--accent); color: var(--accent-fg); }
